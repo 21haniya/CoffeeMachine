@@ -69,7 +69,10 @@ def order():
     if make_coffee in MENU:
         check_ing(make_coffee)
         change(make_coffee)
-
+        
+    elif make_coffee == "off":
+        exit()
+        
     else:
         print("\nSorry, we do not have that coffee :/")
 
