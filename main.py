@@ -24,6 +24,7 @@ MENU = {
     }
 }
 
+profit=0
 resources = {
     "water": 300,
     "milk": 200,
@@ -69,6 +70,12 @@ def order():
     if make_coffee in MENU:
         check_ing(make_coffee)
         change(make_coffee)
+
+    elif make_coffee == "report":
+        print(f"Water: {resources['water']}ml")
+        print(f"Milk: {resources['milk']}ml")
+        print(f"Coffee: {resources['coffee']}g")
+        print(f"Money: ${profit}")
         
     elif make_coffee == "off":
         exit()
